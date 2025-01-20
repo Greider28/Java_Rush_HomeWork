@@ -44,6 +44,22 @@ public class Solution {
             }
         }
 
+        /*Альтернатива
+        Map<String, String> copy = new HashMap<>(map);
+
+        for (String name : copy.values()) {
+            int count = 0;
+            for (String nameTmp : map.values()) {
+                if (nameTmp.equals(name)) {
+                    count++;
+                }
+            }
+            if (count > 1) {
+                removeItemFromMapByValue(map, name);
+            }
+        }
+        */
+
     }
 
     public static void removeItemFromMapByValue(Map<String, String> map, String value) {
