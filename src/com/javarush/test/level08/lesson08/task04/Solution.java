@@ -21,10 +21,31 @@ public class Solution {
         map.put("Смирнов", dateFormat.parse("MAY 1 2012"));
 
         //напишите тут ваш код
+        map.put("Смирнов2", dateFormat.parse("JUNE 1 2012"));
+        map.put("Смирнов3", dateFormat.parse("JULY 1 2012"));
+        map.put("Смирнов4", dateFormat.parse("AUGUST 1 2012"));
+        map.put("Смирнов5", dateFormat.parse("SEPTEMBER 1 2012"));
+        map.put("Смирнов6", dateFormat.parse("OCTOBER 1 2012"));
+        map.put("Смирнов7", dateFormat.parse("NOVEMBER 1 2012"));
+        map.put("Смирнов8", dateFormat.parse("JUNE 1 2012"));
+        map.put("Смирнов9", dateFormat.parse("JUNE 1 2012"));
+        map.put("Смирнов10", dateFormat.parse("JULY 1 2012"));
+
+        return map;
     }
 
     public static void removeAllSummerPeople(Map<String, Date> map) {
         //напишите тут ваш код
+        Map<String, Date> mapNew = new HashMap<>(map);
+        Iterator<Map.Entry<String, Date>> iterator = mapNew.entrySet().iterator();
+        while (iterator.hasNext()){
+            Map.Entry<String, Date> pair = iterator.next();
+            String key = pair.getKey();
+            Date value = pair.getValue();
+            if (value.getMonth() > 4 && value.getMonth() < 8){
+                map.remove(key);
+            }
+        }
 
     }
 
