@@ -27,5 +27,15 @@ public class Solution {
         }
         String stringArrayStr = new String(stringArray);
         System.out.println(stringArrayStr);
+
+        /* alternative solution
+        String result = "";
+        char[] chars = string.toCharArray();
+        for (int i = 0; i < chars.length; i++) {
+            char character = (i == 0 || chars[i - 1] == ' ') ? Character.toUpperCase(chars[i]) : chars[i];
+            result += character;
+        }
+        System.out.println(result);
+        */
     }
 }
