@@ -16,5 +16,27 @@ import java.util.List;
 public class Solution {
     public static void main(String[] args) throws IOException {
         //напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String monthStr = reader.readLine();
+        ArrayList<String> months = new ArrayList<String>();
+        months.add("January");
+        months.add("February");
+        months.add("March");
+        months.add("April");
+        months.add("May");
+        months.add("June");
+        months.add("July");
+        months.add("August");
+        months.add("September");
+        months.add("October");
+        months.add("November");
+        months.add("December");
+        int num = 0;
+        for (int i = 0; i < months.size(); i++){
+            if (months.get(i).equals(monthStr)){
+                num = i + 1;
+            }
+        }
+        System.out.println(monthStr + " is the " + num + " month");
     }
 }
