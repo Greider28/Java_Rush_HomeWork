@@ -7,6 +7,7 @@ package com.javarush.task.task09.task0918;
 */
 
 public class Solution {
+    /* code from the task
     public static void main(String[] args) {
     }
 
@@ -20,5 +21,21 @@ public class Solution {
     }
 
     static class MyException4 {
+    }
+    */
+    //my code
+    public static void main(String[] args) throws Exception{
+    }
+
+    static class MyException extends Exception {
+    }
+
+    static class MyException2 extends MyException {
+    }
+
+    static class MyException3 extends RuntimeException {
+    }
+
+    static class MyException4 extends MyException3 {
     }
 }
