@@ -31,6 +31,21 @@ public class Solution {
         }
 
         // напишите тут ваш код
+        /* мой интересный вариант
+        for (int i = 0; i < alphabet.size(); i++){
+            Character ch = alphabet.get(i);
+            int count = 0;
+            for (int j = 0; j < list.size(); j++){
+                String strToCount = list.get(j);
+                int countCh = strToCount.length() - strToCount.replace(String.valueOf(ch), "").length();
+                count += countCh;
+            }
+            System.out.print(ch + " ");
+            System.out.println(count);
+        }
+            */
+
+        //а это решение авторов
       //подсчет количества букв
         int[] count = new int[alphabet.size()];
         for (String line : list) {
