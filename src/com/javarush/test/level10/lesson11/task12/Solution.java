@@ -32,9 +32,35 @@ public class Solution {
     public static void main(String[] args) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
+        /*
         int id = Integer.parseInt(reader.readLine());
         String name = reader.readLine();
 
         System.out.println("Id=" + id + " Name=" + name);
+        */
+         HashMap<String, Integer> mapOfNumAndString = new HashMap<>();
+
+
+        while(true){
+            String idStr = reader.readLine();
+            if (idStr.equals("")){
+                break;
+            } else {
+                int id = Integer.parseInt(idStr);
+                String name = reader.readLine();
+                if (mapOfNumAndString.containsKey(name)){
+                    System.out.println("Please, enter another String");
+                    name = reader.readLine();
+                    mapOfNumAndString.put(name, id);
+                } else {
+                    mapOfNumAndString.put(name, id);
+                }
+
+            }
+        }
+
+        for (Map.Entry<String, Integer> pair: mapOfNumAndString.entrySet()){
+            System.out.println(pair.getValue() + " " + pair.getKey());
+        }
     }
 }
