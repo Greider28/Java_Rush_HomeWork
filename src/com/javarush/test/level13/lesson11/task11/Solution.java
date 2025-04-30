@@ -32,6 +32,27 @@ import java.util.Scanner;
 public class Solution {
     public static void main(String[] args) {
         // напишите тут ваш код
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+        String fileName = reader.readLine();
+
+        Scanner scanner = new Scanner(new FileInputStream(fileName));
+        List<Integer> nums = new ArrayList<Integer>();
+        int num = 0;
+
+        while (scanner.hasNext()){
+            num = scanner.nextInt();
+            if (num % 2 == 0){
+                nums.add(num);
+            }
+        }
+        Collections.sort(nums);
+        for (Integer value: nums){
+            System.out.println(value);
+        }
+
+        scanner.close();
+
+    }
 
     }
 }
