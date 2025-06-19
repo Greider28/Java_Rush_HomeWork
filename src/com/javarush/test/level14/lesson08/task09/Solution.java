@@ -28,7 +28,11 @@ public class Solution {
         Person(String name) {
             this.name = name;
             this.allMoney = new ArrayList<Money>();
+            
             //напишите тут ваш код
+            allMoney.add(new Hryvnia(500));
+            allMoney.add(new Ruble(300));
+            allMoney.add(new USD(200));
         }
 
         private List<Money> allMoney;
